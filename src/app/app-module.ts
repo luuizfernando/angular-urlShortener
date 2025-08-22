@@ -3,10 +3,16 @@ import { BrowserModule, provideClientHydration, withEventReplay } from '@angular
 
 import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
+import { UrlShortenerForm } from './components/url-shortener-form/url-shortener-form';
+import { UrlResult } from './components/url-result/url-result';
+import { UrlList } from './components/url-list/url-list';
 
 @NgModule({
   declarations: [
-    App
+    App,
+    UrlShortenerForm,
+    UrlResult,
+    UrlList
   ],
   imports: [
     BrowserModule,
