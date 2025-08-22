@@ -1,1 +1,18 @@
-<p>url-list works!</p>
+<div class="list-container">
+  <h3>Links Criados</h3>
+  <ul *ngIf="links.length > 0; else noLinks">
+    <li *ngFor="let link of links">
+      <div class="link-item">
+        <a [href]="link.short_url" target="_blank" class="short-url">{{
+          link.short_url
+        }}</a>
+        <span class="original-url">{{ link.original_url }}</span>
+        <span class="clicks">{{ link.clicks }} cliques</span>
+        <button (click)="onDelete(link)">Excluir</button>
+      </div>
+    </li>
+  </ul>
+  <ng-template #noLinks>
+    <p>Nenhum link encurtado ainda.</p>
+  </ng-template>
+</div>

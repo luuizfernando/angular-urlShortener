@@ -6,8 +6,8 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
 import { UrlShortenerFormComponent } from './components/url-shortener-form/url-shortener-form';
-import { UrlResult, UrlResultComponent } from './components/url-result/url-result';
-import { UrlList } from './components/url-list/url-list';
+import { UrlResultComponent } from './components/url-result/url-result';
+import { UrlListComponent } from './components/url-list/url-list';
 
 @NgModule({
   declarations: [
@@ -19,7 +19,8 @@ import { UrlList } from './components/url-list/url-list';
     HttpClientModule,
     FormsModule,
     UrlShortenerFormComponent,
-    UrlResultComponent
+    UrlResultComponent,
+    UrlListComponent
 ],
   providers: [
     provideBrowserGlobalErrorListeners(),
