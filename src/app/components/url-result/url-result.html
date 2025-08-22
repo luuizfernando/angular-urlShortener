@@ -1,1 +1,7 @@
-<p>url-result works!</p>
+<div class="result-box">
+  <p><strong>URL Original:</strong> {{ result.original_url }}</p>
+  <p>
+    <strong>URL Encurtada:</strong>
+    <a [href]="result.short_url" target="_blank">{{ result.short_url }}</a>
+  </p>
+</div>

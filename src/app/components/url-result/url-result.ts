@@ -1,11 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { ShortenResult } from '../../interfaces/url';
 
 @Component({
   selector: 'app-url-result',
-  standalone: false,
   templateUrl: './url-result.html',
-  styleUrl: './url-result.css'
+  styleUrls: ['./url-result.css']
 })
-export class UrlResult {
-
+export class UrlResultComponent {
+  @Input() result!: ShortenResult;
 }
