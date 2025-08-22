@@ -1,3 +1,13 @@
-<app-url-shortener-form></app-url-shortener-form>
-<app-url-result></app-url-result>
-<app-url-list></app-url-list>
+<div class="container">
+  <h1>URL Shortener</h1>
+
+  <app-url-shortener-form (urlShortened)="onUrlShortened($event)"></app-url-shortener-form>
+
+  <app-url-result *ngIf="shortenResult" [result]="shortenResult"></app-url-result>
+
+  <div class="list-section">
+    <div *ngIf="loadingLinks" class="loading-message">Carregando links...</div>
+    <div *ngIf="linksError" class="error-message">{{ linksError }}</div>
+    <app-url-list [links]="links" (linkDeleted)="onDeleteLink($event)"></app-url-list>
+  </div>
+</div>

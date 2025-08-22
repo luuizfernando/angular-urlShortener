@@ -10,10 +10,9 @@ import { UrlResultComponent } from './components/url-result/url-result';
 import { UrlListComponent } from './components/url-list/url-list';
 
 @NgModule({
-  declarations: [
-    App
-  ],
+  declarations: [],
   imports: [
+    App,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
@@ -27,6 +26,5 @@ import { UrlListComponent } from './components/url-list/url-list';
     provideZonelessChangeDetection(),
     provideClientHydration(withEventReplay())
   ],
-  bootstrap: [App]
 })
 export class AppModule { }
