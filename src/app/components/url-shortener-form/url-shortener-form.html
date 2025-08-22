@@ -1,1 +1,11 @@
-<p>url-shortener-form works!</p>
+<div class="form-container">
+  <input
+    [(ngModel)]="originalUrl"
+    type="url"
+    placeholder="https://exemplo.com/minha-url"
+  />
+  <button (click)="onSubmit()" [disabled]="loading">
+    {{ loading ? "Encurtando..." : "Encurtar URL" }}
+  </button>
+  <p *ngIf="errorMessage" class="error-message">{{ errorMessage }}</p>
+</div>
